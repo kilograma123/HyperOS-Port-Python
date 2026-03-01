@@ -87,6 +87,10 @@ jobs:
             echo "Downloading Velvet ZIP..."
             aria2c -x 16 -s 16 -d gapps -o velvet.zip "${{ github.event.inputs.gms_velvet_url }}"
           fi
+          if [ -n "${{ github.event.inputs.gms_gboard_url }}" ]; then
+             echo "Downloading gboard ZIP..."
+            aria2c -x 16 -s 16 -d gapps -o velvet.zip "${{ github.event.inputs.gms_gboard_url }}"
+          fi
 
       - name: Run Porting Tool
         run: |
