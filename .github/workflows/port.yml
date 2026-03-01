@@ -101,8 +101,9 @@ jobs:
 
       - name: Upload to Gofile
         run: |
-           zip -r9 output.zip out/*_hybrid/
-        
-           RESPONSE=$(curl -F "file=@output.zip" https://upload-eu-par.gofile.io/uploadFile)
-        
+           cd out/*_hybrid/
+           zip -r9 ../../HyperOS-Port-${{ github.run_id }}.zip
+           cd ../../ RESPONSE=$(curl -F "file=@HyperOS-Port-${{ github.run_id }}.zip" https://upload-eu-par.gofile.io/uploadFile)
+           echo "------------------------------------------------------------"
            echo "Download Link: $(echo $RESPONSE | jq -r '.data.downloadPage')"
+           echo "------------------------------------------------------------"
