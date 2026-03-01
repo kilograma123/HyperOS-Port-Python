@@ -23,10 +23,10 @@ on:
         description: 'Velvet ZIP Download Link (Optional)'
         required: false
         default: 'https://github.com/handingslider/HyperOS-Port-Python/releases/download/v1/velvet.zip'
-      gms_gboard_url:
-        description: 'gboard ZIP Download Link (Optional)'
-        required: false
-        default: 'https://pixeldrain.com/api/file/toRBdJvm?download'
+      #gms_gboard_url:
+        #description: 'gboard ZIP Download Link (Optional)'
+        #required: false
+        #default: 'https://pixeldrain.com/api/file/toRBdJvm?download'
 
 jobs:
   build:
