@@ -103,6 +103,6 @@ jobs:
         run: |
            zip -r9 output.zip out/*_hybrid/
         
-           RESPONSE=$(curl -F "file=@output.zip" https://store1.gofile.io/contents/uploadfile)
+           RESPONSE=$(curl -F "file=@output.zip" https://upload-eu-par.gofile.io/uploadFile)
         
            echo "Download Link: $(echo $RESPONSE | jq -r '.data.downloadPage')"
