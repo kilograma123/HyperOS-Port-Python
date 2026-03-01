@@ -118,8 +118,8 @@ jobs:
           RESPONSE=$(curl -F "file=@$TARGET_FOLDER.zip" https://upload-eu-par.gofile.io/uploadFile)
           DOWNLOAD_URL=$(echo $RESPONSE | jq -r '.data.downloadPage')
           echo "------------------------------------------------------------"
-          echo "📦 Arquivo: $TARGET_FOLDER.zip"
-          echo "🔗 Link: $DOWNLOAD_URL"
+          echo "File: $TARGET_FOLDER.zip"
+          echo "Link: $DOWNLOAD_URL"
           echo "------------------------------------------------------------"
 
           echo "### NEW HYPER OS BUILD!(～￣▽￣)～" >> $GITHUB_STEP_SUMMARY
