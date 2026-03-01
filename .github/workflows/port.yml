@@ -123,5 +123,5 @@ jobs:
           echo "------------------------------------------------------------"
 
           echo "### NEW HYPER OS BUILD!(～￣▽￣)～" >> $GITHUB_STEP_SUMMARY
-          echo "- **File:** $TARGET_NAME.zip" >> $GITHUB_STEP_SUMMARY
+          echo "- **File:** $TARGET_FOLDER.zip" >> $GITHUB_STEP_SUMMARY
           echo "- **Download:** [$DOWNLOAD_URL]($DOWNLOAD_URL)" >> $GITHUB_STEP_SUMMARY
