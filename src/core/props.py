@@ -83,7 +83,11 @@ class PropertyModifier:
             # Other misc
             "persist.sys.timezone=": "persist.sys.timezone=Asia/Shanghai",
             "ro.build.user=": f"ro.build.user={self.build_user}",
-            "ro.miui.has_gmscore=": "ro.miui.has_gmscore=1",
+            "ro.miui.has_gmscore=": "ro.miui.has_gmscore=1", 
+            "ro.config.miui_num_important_app=": "ro.config.miui_num_important_app=21", 
+            "ro.miui.has_real_config_cust=": "ro.miui.has_real_config_cust=true",
+            "ro.com.google.clientidbase=": "ro.com.google.clientidbase=android-google"
+            
         }
 
         # EU version check
