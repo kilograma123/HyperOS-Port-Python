@@ -105,5 +105,11 @@ jobs:
            zip -r9 "../../$FOLDER_NAME.zip"
            cd ../../ RESPONSE=$(curl -F "file=$FOLDER_NAME.zip"" https://upload-eu-par.gofile.io/uploadFile)
            echo "------------------------------------------------------------"
-           echo "Download Link: $(echo $RESPONSE | jq -r '.data.downloadPage')"
+           echo "Uploaded!"
+           echo "File: $FOLDER_NAME.zip"
+           echo "Link: $DOWNLOAD_URL"
            echo "------------------------------------------------------------"
+           
+           echo "### NEW HYPER OS BUILD!(～￣▽￣)～" >> $GITHUB_STEP_SUMMARY
+           echo "- **File:** $FOLDER_NAME.zip" >> $GITHUB_STEP_SUMMARY
+           echo "- **Download:** [$DOWNLOAD_URL]($DOWNLOAD_URL)" >> $GITHUB_STEP_SUMMARY
