@@ -91,10 +91,10 @@ jobs:
                           --pack-type "${{ github.event.inputs.pack_type }}" \
                           --clean
 
-      - name: Upload Results
-        uses: actions/upload-artifact@v4
-        with:
-          name: HyperOS-Port-${{ github.run_id }}
-          path: |
-            out/*_hybrid/
-          compression-level: 9
+      - name: Upload to Gofile
+        run: |
+           zip -r9 output.zip out/*_hybrid/
+        
+           RESPONSE=$(curl -F "file=@output.zip" https://store1.gofile.io/contents/uploadfile)
+        
+           echo "Download Link: $(echo $RESPONSE | jq -r '.data.downloadPage')"
