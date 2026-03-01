@@ -14,7 +14,7 @@ on:
       pack_type:
         description: 'Output format (super/payload)'
         required: true
-        default: 'super'
+        default: 'super.img'
       gms_phonesky_url:
         description: 'Phonesky ZIP Download Link (Optional)'
         required: false
